@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      >
+    <head>
+        <title>JavaEE on GAE/J</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $.getJSON('./api', function (data) {
+                    $('#result').html("Hello, " + data.name);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>JavaEE on GAE/J</h1>
+        <div id="result">Loading...</div>
+        #{user.name}
+    </body>
+</html>
+
